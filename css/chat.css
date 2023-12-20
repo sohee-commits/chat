@@ -1,0 +1,129 @@
+.chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat .warning {
+  color: crimson;
+}
+
+#openLogin {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border-radius: 0.5rem;
+}
+
+.chat .messages {
+  position: absolute;
+  bottom: 5rem;
+  width: 80%;
+  margin: 1rem;
+}
+
+.chat .message {
+  display: grid;
+  margin-bottom: 1rem;
+  outline: 0.1rem solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.chat .username {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f6f6f6;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+.chat .username p {
+  font-weight: bold;
+}
+
+.chat .username small {
+  opacity: 0.5;
+}
+
+.chat .username * {
+  background-color: transparent;
+}
+
+.chat .message-text {
+  padding: 1rem;
+}
+
+.chat form {
+  position: absolute;
+  bottom: 2rem;
+  width: 80%;
+  display: grid;
+  grid-template-columns: minmax(4rem, 7rem) minmax(60%, 1fr) minmax(1rem, 3rem);
+}
+
+.chat input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: 0.1rem solid #ddd;
+  transition: all 0.2s;
+}
+
+.chat textarea {
+  resize: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: 0.1rem solid #ddd;
+  transition: all 0.2s;
+}
+
+.chat textarea:focus-visible,
+.chat input:focus-visible {
+  outline-color: #bbb;
+}
+
+.chat .btn {
+  font-size: 1.5rem;
+  color: #fdfdfd;
+  background-color: dodgerblue;
+  outline: 0.1rem solid dodgerblue;
+  border: none;
+  transition: all 0.2s;
+}
+
+.chat form button {
+  margin-top: 0.05rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.chat button:hover,
+.chat button:focus-visible {
+  cursor: pointer;
+  background-color: #007af5;
+}
+
+@media (max-width: 300px) {
+  .chat .messages {
+    bottom: 10rem;
+  }
+
+  .chat textarea {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .chat form button {
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    grid-column: 1 / 3;
+  }
+
+  .chat form {
+    grid-template-columns: minmax(4rem, 7rem) minmax(60%, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
