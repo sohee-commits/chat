@@ -10,23 +10,49 @@
   color: crimson;
 }
 
-#openLogin {
+/* floating on the left top go-back-to-login button */
+.menu {
   position: absolute;
   top: 2rem;
   left: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.menu * {
   border-radius: 0.5rem;
+}
+
+#emoji {
+  background-color: #ddd;
+  outline-color: #ddd;
+  cursor: not-allowed;
 }
 
 .chat .messages {
   position: absolute;
   bottom: 5rem;
   width: 80%;
+  height: 80vh;
   margin: 1rem;
+  overflow-y: scroll;
+}
+
+.messages::-webkit-scrollbar {
+  width: 6px;
+  background-color: #eee;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #ddd;
 }
 
 .chat .message {
   display: grid;
-  margin-bottom: 1rem;
+  /* 12px for the scrollbar */
+  width: calc(100% - 12px);
+  height: min-content;
+  margin: 4px 0 1rem 4px;
   outline: 0.1rem solid #ddd;
   border-radius: 0.5rem;
 }
@@ -108,7 +134,12 @@
 }
 
 @media (max-width: 300px) {
+  .chat .messageForm {
+    bottom: 4rem;
+  }
+
   .chat .messages {
+    width: 90%;
     bottom: 10rem;
   }
 
