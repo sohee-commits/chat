@@ -17,6 +17,7 @@
   left: 2rem;
   display: grid;
   gap: 1rem;
+  background: none;
 }
 
 .menu * {
