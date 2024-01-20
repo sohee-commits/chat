@@ -10,8 +10,10 @@
     <script src="./js/index.js" defer></script>
   </head>
   <body>
+    <!-- login page -->
     <section class="join">
       <h1>join the chat</h1>
+      <!-- password form -->
       <form class="form">
         <div class="password">
           <label for="password">password</label>
@@ -22,6 +24,7 @@
       <div class="error"></div>
     </section>
 
+    <!-- chat page -->
     <section class="chat hidden">
       <section class="messages">
         <div class="message">
@@ -39,6 +42,7 @@
           <p class="message-text">I love that! („• •„)੭</p>
         </div>
       </section>
+      <!-- message form -->
       <form class="messageForm">
         <input
           type="text"
@@ -54,7 +58,12 @@
         <button type="submit" class="btn">⬆</button>
       </form>
 
-      <button id="openLogin" class="btn">↩</button>
+      <div class="menu">
+        <!-- go back to the login page -->
+        <button id="openLogin" class="btn">↩</button>
+        <!-- open emoji board -->
+        <button id="emoji" class="btn" title="feature is in progress">☺</button>
+      </div>
     </section>
   </body>
 </html>
