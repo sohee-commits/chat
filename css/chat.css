@@ -134,10 +134,6 @@
 }
 
 @media (max-width: 300px) {
-  .chat .messageForm {
-    bottom: 4rem;
-  }
-
   .chat .messages {
     width: 90%;
     bottom: 10rem;
