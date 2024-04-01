@@ -1,0 +1,16 @@
+{
+	"name": "chat",
+	"version": "1.0.0",
+	"description": "more of used js:",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js"
+	},
+	"keywords": [],
+	"author": "sohee",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.19.2",
+		"nodemon": "^3.1.0"
+	}
+}
